@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Baby</string>
+    <string name="baby_name">Bebeğin Adı</string>
+    <string name="baby_datebutton">Doğum Tarihini Seçiniz</string>
+</resources>
