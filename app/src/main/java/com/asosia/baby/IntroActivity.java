@@ -2,11 +2,12 @@ package com.asosia.baby;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import java.util.GregorianCalendar;
 public class IntroActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     public EditText babyName;
+    public Button birthday;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,9 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
     private void setDate(final Calendar c) {
         final DateFormat dateformat = DateFormat.getDateInstance(DateFormat.MEDIUM);
-        ((TextView) findViewById(R.id.textView)).setText(dateformat.format(c.getTime()));
+        ((TextView) findViewById(R.id.textView)).setText(getString(R.string.baby_datetextview) +" "+ dateformat.format(c.getTime()));
+        birthday = findViewById(R.id.buttonBirthday);
+        birthday.setText("Doğum Tarihi Seçildi");
     }
 
     @Override
@@ -53,6 +57,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
     public static class DatePickerFragment extends DialogFragment {
 
+        @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar c = Calendar.getInstance();

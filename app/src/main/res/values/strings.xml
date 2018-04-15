@@ -2,4 +2,7 @@
     <string name="app_name">Baby</string>
     <string name="baby_name">Bebeğin Adı</string>
     <string name="baby_datebutton">Doğum Tarihini Seçiniz</string>
+    <string name="baby_datetextview">Doğum Tarihi:</string>
+    <string name="sex_m">Erkek</string>
+    <string name="sex_f">Kız</string>
 </resources>
