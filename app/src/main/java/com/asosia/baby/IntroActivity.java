@@ -43,7 +43,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
     private void setDate(final Calendar c) {
         final DateFormat dateformat = DateFormat.getDateInstance(DateFormat.MEDIUM);
-        ((TextView) findViewById(R.id.textView)).setText(getString(R.string.baby_datetextview) +" "+ dateformat.format(c.getTime()));
+        ((TextView) findViewById(R.id.textView)).setText((getString(R.string.baby_datetextview) +" "+ dateformat.format(c.getTime())));
         birthday = findViewById(R.id.buttonBirthday);
         birthday.setText("Doğum Tarihi Seçildi");
     }
