@@ -5,4 +5,5 @@
     <string name="baby_datetextview">Doğum Tarihi:</string>
     <string name="sex_m">Erkek</string>
     <string name="sex_f">Kız</string>
+    <string name="submit">Kaydet</string>
 </resources>
